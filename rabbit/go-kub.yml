@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: gloo
+  name: gloor-ingress
+  namespace: proyecto
+spec:
+  rules:
+    - host: webg.danielk8s.tk
+      http:
+        paths:
+          - backend:
+              serviceName: golb-service
+              servicePort: 8090
+            path: /

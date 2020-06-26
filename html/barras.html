@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>SOPES 1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		
+		 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		  <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+		  <script src="./morris.js"></script>
+		  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
+		  <script src="lib/example.js"></script>
+		  <link rel="stylesheet" href="lib/example.css">
+		  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.css">
+		  <link rel="stylesheet" href="./morris.css">
+		  
+		  
+	
+  
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>Sistemas Operativos 1</strong>, Proyecto 2<br />
+					
+					 </h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2> C O R O N A V I R U S 
+							</h2>
+						</header>
+						
+						<!--<ul class="actions">
+							<li><a href="#" class="button">. </a></li>
+						</ul> -->
+					</section>
+
+				<!-- Two -->
+					<section id="two">
+						<h2>Reportes: Deberá mostrar el top tres de departamentos con más casos</h2>
+						<div class="row">
+						
+						<div id="graph""></div>
+						
+						
+						</div>
+						<!--<ul class="actions">
+							<li><a href="#" class="button">Full Portfolio</a></li>
+						</ul>-->
+					</section>
+				
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			
+			<script>
+			Morris.Bar({
+			  element: 'graph',
+			  data: [
+				{x: '2011 Q1', y: 0},
+				{x: '2011 Q2', y: 1},
+				{x: '2011 Q3', y: 2},
+				{x: '2011 Q4', y: 3},
+				{x: '2012 Q1', y: 4},
+				{x: '2012 Q2', y: 5},
+				{x: '2012 Q3', y: 6},
+				{x: '2012 Q4', y: 7},
+				{x: '2013 Q1', y: 8}
+			  ],
+			  xkey: 'x',
+			  ykeys: ['y'],
+			  labels: ['Y'],
+			  barColors: function (row, series, type) {
+				if (type === 'bar') {
+				  var red = Math.ceil(255 * row.y / this.ymax);
+				  return 'rgb(' + red + ',0,100)';
+				}
+				else {
+				  return '#000';
+				}
+			  }
+			});
+						</script>
+
+	</body>
+</html>
